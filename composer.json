@@ -1,0 +1,21 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "version": "1.0.0",
+    "name": "zmrq/php-pwa",
+    "description": "A PHP library for Progressive Web Apps (PWAs)",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zmrq\\PWA\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zaiimrq",
+            "email": "zaiimrq@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
