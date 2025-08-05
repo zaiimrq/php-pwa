@@ -1,4 +1,5 @@
 {
+    "version": "1.0.0",
     "name": "zmrq/php-pwa",
     "description": "A PHP library for Progressive Web Apps (PWAs)",
     "type": "package",
@@ -14,6 +15,6 @@
             "email": "zaiimrq@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {}
 }
