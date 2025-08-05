@@ -89,6 +89,16 @@ composer require zmrq/php-pwa
 ```
 ---
 
+## 🖼️ Offline Page Preview
+
+Below is a preview of the offline page as shown by `offline.png`:
+
+<p align="center">
+  <img src="public/pwa/offline.png" alt="Offline Page Preview" width="400">
+</p>
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork this repository and submit a pull request.

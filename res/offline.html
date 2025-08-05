@@ -3,19 +3,71 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Check your internet connection</title>
-    <style> body {margin: 0;background: linear-gradient(172deg, #181722 20%, #ff2d20 100%, #8d7171 100%);display: flex;justify-content: center;align-items: center;height: 100vh;font-family: "Lato", sans-serif;}.container {text-align: center;}.text {color: #fff;font-weight: 300;font-size: 45px;margin-bottom: 40px;animation: fade-in-out 2.5s infinite;}.box {width: 240px;height: 150px;position: relative;margin: 0 auto;}.comp, .server {border: 3px solid #fff;}.comp {width: 80px;height: 55px;border-radius: 5px;position: absolute;top: 0;}.comp:after {content: "";position: absolute;top: 19px;left: 5px;width: 65px;height: 10px;border-radius: 360px;border: 3px solid #fff;}.loader {position: absolute;top: 26px;left: 12px;width: 8px;height: 7px;background: #fff;border-radius: 8%;animation: loader 5s infinite linear 0.5s;}.con {position: absolute;top: 28px;left: 85px;width: 100px;height: 3px;background: #fff;}.byte {position: absolute;top: 25px;left: 80px;width: 9px;height: 9px;background: #fff;border-radius: 50%;opacity: 0;animation: byte_animate 5s infinite linear 0.5s;z-index: 6;}.server {width: 35px;height: 65px;border-radius: 360px;background: #eaecf4;transform: rotateX(58deg);position: absolute;top: 6px;left: 185px;z-index: 1;}.server:before {content: "";position: absolute;top: -47px;left: -3px;width: 35px;height: 35px;background: #d3bbba;border-radius: 50%;border: 3px solid #fff;z-index: 20;}.server:after {content: "";position: absolute;top: -26px;left: -3px;width: 35px;height: 40px;background: #fff;border-left: 3px solid #fff;border-right: 3px solid #fff;z-index: 17;}@keyframes byte_animate {0% {opacity: 0;left: 80px }4% {opacity: 1 }46% {opacity: 1 }50% {opacity: 0;left: 185px }54% {opacity: 1 }96% {opacity: 1 }100% {opacity: 0;left: 80px }}@keyframes loader {0% {width: 8px }100% {width: 63px }}@keyframes fade-in-out {0%, 100% {opacity: 1 }50% {opacity: 0 }}</style>
+    <title>Offline - No Internet Connection</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #232946;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .offline-container {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(35,41,70,0.2);
+            padding: 48px 32px;
+            text-align: center;
+            max-width: 350px;
+        }
+        .offline-icon {
+            font-size: 64px;
+            color: #e63946;
+            margin-bottom: 24px;
+            animation: shake 1.5s infinite;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0);}
+            20%, 60% { transform: translateX(-8px);}
+            40%, 80% { transform: translateX(8px);}
+        }
+        .offline-title {
+            font-size: 2rem;
+            color: #232946;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .offline-desc {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .retry-btn {
+            background: #e63946;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 32px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .retry-btn:hover {
+            background: #b71c1c;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="text">CONNECTING</div>
-    <div class="box">
-        <div class="comp"></div>
-        <div class="loader"></div>
-        <div class="con"></div>
-        <div class="byte"></div>
-        <div class="server"></div>
+    <div class="offline-container">
+        <div class="offline-icon">📡</div>
+        <div class="offline-title">You're Offline</div>
+        <div class="offline-desc">
+            It looks like you lost your internet connection.<br>
+            Please check your network and try again.
+        </div>
+        <button class="retry-btn" onclick="location.reload()">Retry</button>
     </div>
-</div>
 </body>
 </html>
